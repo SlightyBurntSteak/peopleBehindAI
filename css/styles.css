@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+
+/* ===============================================
+       CSS RESET & BASE STYLES
+=============================================== */
+* {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+}
+
+:root {
+     /* Colors */ 
+     --color-white: #FFFFFF;
+     --color-teal: #B7E5CD;
+     --color-teal2: #8ABEB9;
+     --color-blue: #305669;
+     --color-black: #000000;
+
+
+
+     /* Topography */
+     --font-reg: RobotoMono, Arial, sans-serif;
+     --font-loud: Arvo, sans-serif;
+}
+
+body {
+     background: var(--color-teal);
+     font-family: var(--font-reg);
+     line-height: 1.6;
+     overflow: none;
+}
+
+/* NAV BAR */
+/* Later for phones, make it so the logo is on top and links are below it*/
+header {
+     border-bottom: 6px dashed var(--color-teal2);
+     position: sticky;
+     top: 0;
+     left: 0;
+     z-index: 100;
+}
+
+header::after {
+    border-bottom: 4px dashed var(--color-teal2);
+    border-left: 10px;
+
+}
+
+
+
+.main-nav {
+     background-color: var(--color-teal2);
+     flex-wrap: nowrap; 
+     color: var(--color-white);     
+     overflow-x: auto;
+     display: flex;
+     max-width: 100%;
+     justify-content: space-between; /* Logo Left, nav right */
+     align-items: center; /* vertically centered */
+     padding: 1rem 1.5rem;
+     margin: 0 auto;
+     font-family: var(--font-loud);
+}
+
+
+
+.nav-logo {
+     color: var(--color-white);   
+     font-size: 1.8rem;
+     margin-right: 1rem;
+     font-weight: bold;
+     display: inline-block;
+     text-decoration: none;
+}
+
+.nav-logo:hover {
+    color: var(--color-blue);   
+}
+
+.nav-links {
+     list-style: none;
+     display: flex;
+     align-items: center;
+     justify-content: space-evenly;
+     gap: 1rem; 
+}
+
+.nav-links li {
+     padding-left: 1.1rem;
+}
+
+.nav-links a {
+     display: flex;
+     text-decoration: none;
+     font-size: 1.1rem;
+     text-align: center;
+     justify-content: center;
+     font-family: var(--font-loud);
+     color: var(--color-white);
+}
+
+.nav-links a:hover {
+     text-decoration: underline;
+     color: var(--color-blue);
+}
+
+/* INTRO */
+
+.intro {
+     background-color: var(--color-teal);
+     position: relative;
+}
+
+.intro-head {
+     padding: 1rem 3rem;
+     text-align: left;
+}
+
+.intro h2 {
+    font-family: var(--font-loud);
+    font-size: 2.2rem;
+    color: var(--color-black);
+}
+
+.intro-head h3 {
+    margin-top: 1rem;
+    font-family: var(--font-loud);
+    font-size: 1.8rem;
+    color: var(--color-black);
+}
+
+.intro-head p {
+    font-size: 1.2rem;
+    text-align: justify;
+    padding-bottom: 1rem;
+    padding-left: 1.5rem;
+    font-family: var(--font-reg);
+}
+
+.intro-head-line {
+    border-left: 3px solid var(--color-teal2);
+}
+
+.intro-head-line2 {
+    margin-left: 1.5rem;
+}
+
+.intro-head-line2 p {
+    border-left: 3px solid var(--color-teal2);
+}
